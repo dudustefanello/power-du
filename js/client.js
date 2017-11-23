@@ -22,8 +22,7 @@ var getBadges = function(t){
 var boardButtonCallback = function(t){
       return t.popup({
             title: 'Popup List Example',
-            items: [
-                  {
+            items: [{
                         text: 'Open Modal',
                         callback: function(t){
                               return t.modal({
@@ -103,7 +102,7 @@ var cardButtonCallback = function(t){
       // we could provide a standard iframe popup, but in this case we
       // will let Trello do the heavy lifting
       return t.popup({
-            title: 'Popup Search Example',
+            title: t.card('id'),
             items: items, // Trello will search client-side based on the text property of the items
             search: {
                   count: 5, // How many items to display at a time
