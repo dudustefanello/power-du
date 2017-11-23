@@ -4,10 +4,6 @@ var GLITCH_ICON = './images/glitch.svg';
 var WHITE_ICON = './images/icon-white.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
-var randomBadgeColor = function() {
-      return ['green', 'yellow', 'red', 'none'][Math.floor(Math.random() * 4)];
-};
-
 var getBadges = function(t){
       return t.card('name')
       .get('name')
@@ -15,11 +11,9 @@ var getBadges = function(t){
             console.log('We just loaded the card name for fun: ' + cardName);
 
             return {
-                  // its best to use static badges unless you need your badges to refresh
-                  // you can mix and match between static and dynamic
-                  title: 'Detail Badge', // for detail badges only
+                  title: 'Detail Badge',
                   text: 'Mudei a Cor',
-                  icon: null, // for card front badges only
+                  icon: null,
                   color: 'red'
             };
       });
@@ -122,28 +116,23 @@ var cardButtonCallback = function(t){
       // but what if we don't have all the information up front?
       // no worries, instead of giving Trello an array of `items` you can give it a function instead
       /*
-      return t.popup({
-      title: 'Popup Async Search',
-      items: function(t, options) {
-      // use options.search which is the search text entered so far
-      // and return a Promise that resolves to an array of items
-      // similar to the items you provided in the client side version above
-},
-search: {
-placeholder: 'Start typing your search',
-empty: 'Huh, nothing there',
-searching: 'Scouring the internet...'
-}
-});
-*/
+            return t.popup({
+            title: 'Popup Async Search',
+            items: function(t, options) {
+            // use options.search which is the search text entered so far
+            // and return a Promise that resolves to an array of items
+            // similar to the items you provided in the client side version above
+      */
 };
 
-// We need to call initialize to get all of our capability handles set up and registered with Trello
+// Precisamos chamar a inicialização para obter todas as nossas funções de
+// capacidade configuradas e registradas com o Trello
 TrelloPowerUp.initialize({
-      // NOTE about asynchronous responses
-      // If you need to make an asynchronous request or action before you can reply to Trello
-      // you can return a Promise (bluebird promises are included at TrelloPowerUp.Promise)
-      // The Promise should resolve to the object type that is expected to be returned
+      // NOTA sobre respostas assíncronas
+      // Se você precisa fazer uma solicitação ou ação assíncrona antes de poder
+      // responder a Trello você pode retornar uma Promessa (as promessas do
+      // Bluebird estão incluídas no TrelloPowerUp.Promise).
+      // A promessa deve resolver o tipo de objeto que se espera que seja retornado
       'attachment-sections': function(t, options){
             // options.entries is a list of the attachments for this card
             // you can look through them and 'claim' any that you want to
