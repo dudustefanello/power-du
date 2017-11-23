@@ -1,11 +1,11 @@
 {
   "name": "Power-Up do Dudu",
   "description": "",
-  "details": "A static sample Power-Up hosted on GitHub pages. Feel free to fork [this repository](https://github.com/trello/power-up-template) as a starting point for your own Power-Up.",
+  "details": "Este Power-Up está sendo desenvolvido por Eduardo Stefanello e não está pronto ainda.",
   "icon": {
-    "url": "logo.png"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Wikimedia-logo.png"
   },
-  "author": "Trello Inc",
+  "author": "Stefanello, Eduardo",
   "capabilities": [
     "authorization-status",
     "attachment-sections",
