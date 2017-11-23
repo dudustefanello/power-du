@@ -102,7 +102,7 @@ var cardButtonCallback = function(t){
       // we could provide a standard iframe popup, but in this case we
       // will let Trello do the heavy lifting
       return t.popup({
-            title: 'Popup List Example',
+            title: 'Popup Search Example',
             items: items, // Trello will search client-side based on the text property of the items
             search: {
                   count: 5, // How many items to display at a time
