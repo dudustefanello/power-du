@@ -107,7 +107,7 @@ var cardButtonCallback = function(t){
             search: {
                   count: 5, // How many items to display at a time
                   placeholder: 'Search National Parks',
-                  empty: 'No parks found'
+                  empty: t.card('id') + 'No parks found'
             }
       });
 
